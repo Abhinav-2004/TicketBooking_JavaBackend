@@ -5,6 +5,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class UserServiceUtil {
     public static String hashPassword(String plainPassword) {
+        System.out.println("Hashing Password");
         return BCrypt.withDefaults().hashToString(12, plainPassword.toCharArray());
         
     }

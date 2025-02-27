@@ -1,15 +1,28 @@
 package ticket.booking.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.sql.Time;
 import java.util.List;
 import java.util.Map;
 
 public class Train {
+    @JsonProperty("train_id")
     private String trainId;
+    @JsonProperty("train_no")
     private String trainNo;
+    @JsonProperty("seats")
     private List<List<Integer>> seats;
+    @JsonProperty("station_times")
     private Map<String, String> stationTimes;
+    @JsonProperty("stations")
     private List<String> stations;
+    @JsonProperty("train_info")
+    private String trainInfo;
+    public void setTrainInfo(String trainInfo) {
+        this.trainInfo = trainInfo;
+    }
+
 
     public List<List<Integer>> getSeats() {
         return seats;
